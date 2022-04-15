@@ -9,7 +9,8 @@ public class SortingAlgos {
 //        SelectionSort(arr);
 //        InsertionSort(arr);
 //        ShellSort(arr);
-        QuickSort(arr, 0, arr.length - 1);
+//        QuickSort(arr, 0, arr.length - 1);
+        partition(arr, 0, arr.length - 1);
     }
 
     /**
@@ -72,11 +73,11 @@ public class SortingAlgos {
 
             int i = j - 1;
             while ((i > -1) && (arr[i] > key)) {
-                arr[i+1] = arr[i];
+                arr[i + 1] = arr[i];
                 i--;
 
             }
-            System.out.println(i+1);
+            System.out.println(i + 1);
 
             arr[i + 1] = key;
 
@@ -153,7 +154,6 @@ public class SortingAlgos {
         arr[high] = temp;
 
         // return the position from where partition is done
-        System.out.println(Arrays.toString(arr));
         return (i + 1);
 
     }
